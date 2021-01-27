@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width>, initial-scale=1.0">
+    <title>Document</title>
+
+    
+ 
+
+ <link rel="stylesheet" href="style.css/stylin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body background="imags/a23.jpg">
+    <header>
+        
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+       
+
+       <div class = headtaga>
+        
+
+         </div>
+        </header>
+    <form action="#" onsubmit="return verify()" class ="login1">
+        <h2> User Signup</h2>
+        <table align="centre"  Border=0 CellPadding=0 CellSpacing =0 Size="1000" >
+            <tbody>
+                <tr>
+                    <td align="right"><b> Login Name::</b></td>
+                    <td> <input name="login Name" id="loginname" onblur="return verify1()"></td>
+                  
+
+                    
+                </tr>
+             
+                <tr> <td align="right"><b> Email ::</b></td>
+                    <td> <input name="email" id="email"></td></tr>
+                   
+                    <tr>
+                        <td align="right"><b> password::</b></td>
+                    <td> <input name="password" type="password" onblur="return verify1()" id="passwd"></td><br></tr>
+                   <tr> <td align="right"><b> phoneno::</b></td>
+                    <td> <input name="phoneno" id="phoneno"></td></tr> 
+            </tbody>
+        </table>
+        <br>
+        <p><table align=centre Border=0 CellPadding=0 CellSpacing =0 Size="1000">
+            <tbody>
+<tr>
+    <td>
+        <font color=red face=verdana size=1><b>password format:maximum 8 characters,1 upper,1 lower 1 number ONLY</b></font>
+    </td>
+</tr>
+<tr>
+    <td>
+        <font color=red face=verdana size=1><b>phonenumber format XXX-XXX-XXXX,XXX XXX XXXX,XXX.XXX.XXXX</b></font>
+    </td>
+</tr>
+
+            </tbody>
+
+
+        </table></p>
+        <br>
+        
+        <div id="fname">
+            <button id ="submit"> Signup </button>
+          
+
+            
+
+          </div>
+          <label id="error"></label>
+    </form>
+    
+    <script>
+       let loginname=document.getElementById("loginname");
+let email=document.getElementById("email");
+let passwd=document.getElementById("passwd");
+let phoneno=document.getElementById("phoneno");
+let error= document.getElementById("error");
+let phoneno1= /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.][0-9]{4,6}$/
+let RegExp=  /^([A-Z a-z 0-9\.-]+)@([A-Z a-z 0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/
+let pwd= /^(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])[a-zA-Z\d]{8,}$/
+function verify()
+              {
+                 
+
+            //       if((passwd.value) == "" || (passwd.value.length<=8))
+            //    {
+                
+                 
+               
+            //      error.innerHTML="error,password length should be more than 5";
+                
+            //       return false;
+            //    }
+              
+                  if((RegExp.test(email.value) && phoneno1.test(phoneno.value) && pwd.test(passwd.value )))
+                  {
+                      error.innerHTML="correct";
+                      error.style.color="green";
+                      return true;
+              
+                  }
+                  else{
+              
+                      error.innerHTML="you have entered an invalid email,PHONENUMBER,PASSWORD";
+                      error.style.color="red";
+                      email.value.color="blue";
+
+                      return false;
+              
+              }
+            //   if(phoneno1.test(phoneno.value))
+            //   {
+            //     error.innerHTML="correct";
+            //           error.style.color="green";
+            //           return true;
+            //   }
+            //   else
+            //   {
+            //     error.innerHTML="you have entered an invalid number";
+            //           error.style.color="red";
+            //           phoneno.value.color="blue";
+            //           return false;
+            //   }
+
+            }
+             
+            
+        function verify1()
+        {
+
+            var flag=0;
+            var passwd=document.forms[0].elements[2].value;
+            for(i=0;i<=3;i++)
+            {
+if(document.forms[0].elements[i].value=="")
+{
+    alert("please fill in the " + document.forms[0].elements[i].name + " field");
+    document.forms[0].elements[i].focus();
+    flag=1;
+    break;
+}
+            }
+            if(flag==1){
+                return false;
+            }
+            var passwd=document.forms[0].elements[2].value;
+    
+    //  if(passwd.length<5)
+    // {
+    //     alert("password must be 5 or more characters");
+    //     return false;
+    // }
+    // if(passwd.length>8)
+    // {
+    //     alert("password must not be more than 8 or more characters");
+    //     return false;
+    // }
+    // else if((passwd.value)!==("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"))
+    // {
+    //     alert("password must contain alphabets");
+    //     return false;
+    // }
+    
+    // else if((passwd.value)!==("0123456789"))
+    // {
+    //     alert("password must contain numbers");
+    //     return false;
+    // }
+    
+        
+
+        return true;
+}
+
+function ischarsinbag(string,bag)
+{
+    
+    var i,s,charval;
+    for(i=0;i<string.length;i++)
+    {
+       
+        var charval=s.charAt(i);
+        if(bag.indexOf(charval)==-1)
+        
+        return false;
+    }
+    alert(passwd.value);
+    return true;
+}
+
+function isnumberinpass(string,bag)
+{
+    var i;
+    var flag;
+    flag=0;
+    for(i=0;i<string.length;i++)
+    {
+       
+    var charval=s.charAt(i);
+    if(bag.indexof(charval) == -1)
+    {
+        continue;
+    }
+    else{
+
+        flag=1;
+        break;
+    }
+}
+    
+    if (flag==1){
+        return true;
+    }
+    else{
+        return false;
+    }
+
+    return false;
+}
+
+
+
+
+            
+            
+    </script>
+</body>
+</html>

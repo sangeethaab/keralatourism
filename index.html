@@ -1,0 +1,165 @@
+
+  
+      <!DOCTYPE html>
+      
+      <html>
+        
+        <head>
+          <title>home</title>
+      
+          <link rel="stylesheet" href="style.css/stylin.css">
+           
+            
+            
+
+             <body background="imags/Kathakali-1.jpg">
+
+               <header>
+                <img src="imags/downloadlogo.png" >
+
+               
+
+               <div class = headtaga>
+                
+                 <a href="#"> Home </a>
+                <a href="#"> Login </a>
+                <a href="./signup2.html"> Signup</a>
+                <a href="./Districts.html"> Districts </a>
+                
+               
+                 </div>
+                </header>
+
+
+                 <form action="#" class="login" onsubmit=" return validate()">
+                  <h2> User login</h2>
+                   <br>
+                <div class="lname">
+    
+                 <label> Email ID     </label>
+                <input type="text" placeholder="Email" id ="email">
+               </div>
+               <br>
+               <div class="lname">
+               
+                <label>Password</label>
+    
+                <input type="password" placeholder="password" id="password">
+              
+               </div>
+ <br>
+               <div id="fname">
+                <button id ="submit"> Login </button>
+                <br>
+
+               
+                
+               
+              </div>
+              <label id="error"></label>
+              <br>
+              <br>
+        <div>   <input type="checkbox" name="paswword">
+          <label>Remember Password</label>
+        </div>
+        <div>   <input type="checkbox" name="paswword">
+          <label><u>Forgot Password?</u></label>
+        </div>
+           
+              
+    
+                </form>
+
+
+                 <div class = sidetag>
+            
+                  <h1>WELCOME TO GOD'S OWN COUNTRY</h1>
+            
+              </br>
+                 <ul>
+                <li>Tourist packages with food and accomodation provided at reasonable prices</li>
+               <li>Visit to the kerala backwaters,ayurvedic spa centres also provided.</li>
+             </ul>
+                 </div> 
+               
+                 <script>
+                  let password=document.getElementById("password");
+                  let email= document.getElementById("email");
+              let error= document.getElementById("error");
+              let error1= document.getElementById("error1");
+              let RegExp=  /^([A-Z a-z 0-9\.-]+)@([A-Z a-z 0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/
+              let pwd= /^(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])[a-zA-Z\d]{8,}$/
+              
+              
+              function validate()
+              {
+                  
+                      
+                  let RegExp=  /^([A-Z a-z 0-9\.-]+)@([A-Z a-z 0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/
+              //     if((password.value) == "" || (password.value.length<8))
+              //  {
+                
+                 
+               
+              //    error.innerHTML="error,enter password and email";
+              //    error.style.color="black";
+              //     return false;
+              //  }
+              
+                  if(RegExp.test(email.value) && pwd.test(password.value))
+                  {
+                      error.innerHTML="CORRECT";
+                      error.style.color="black";
+                      return true;
+              
+                  }
+                  else{
+              
+                      error.innerHTML="you have entered an invalid email,password";
+                      error.style.color="black";
+                      return false;
+              
+              }
+            }
+              
+              // if((email.value) =="" || (password.value) == "")
+              // {
+              //     alert("email must be entered");
+              //     alert("password must be entered");
+                  
+              //     return false;phoneno
+              // }
+              
+              
+              // else if(RegExp.test(email.value))
+              //      {
+              //          error.innerHTML="VALID";
+              //         error.style.color="green";
+              //         return true;
+              
+              //      }
+              //     else{
+              
+              //         error.innerHTML="invalid email entered";
+              //         email.style.color="red";
+              //         error.style.color="red";
+              //         return false;
+              
+              // }
+              
+              // }
+              </script>
+              
+              
+ 
+
+                
+
+              
+              
+              
+            </body>
+
+
+      </html>
+      

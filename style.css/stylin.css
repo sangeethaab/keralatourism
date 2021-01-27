@@ -1,0 +1,177 @@
+*{
+
+    padding:0;
+    margin:0;
+}
+
+.clearfix::after{
+
+    content:"";
+    clear: both;
+    display: table;
+}
+body
+{
+    background-size:cover;
+    
+}
+header
+{
+   
+    size:1em;
+}
+
+footer
+{
+background-color: black;
+color: white;
+height: 1.5em;
+margin-top: 29%;
+}
+  
+img
+{
+    margin-left:10px;
+    margin-top: 10px;
+}
+
+
+.login
+{
+    float:right;
+    border:2px solid red;
+    background-color: beige;
+    height: 14em;
+    margin-top: 5%;
+    margin-right: 2%;
+    padding:30px;
+    
+}
+.login1
+{
+    float: right;
+    border:2px solid white;
+    background-color: beige;
+    height: 13em;
+    margin-top: 3%;
+    margin-right: 2%;
+    padding:30px;
+    
+}
+
+.login h2
+{
+
+    text-align: center;
+}
+.login1 h2
+{
+
+    text-align: center;
+}
+.lname
+{
+    height: 2em;
+}
+
+.login #fname
+{
+
+    
+    text-align: center;
+    color: white;
+    background-color: dodgerblue;
+    border:1px-solid dodgerblue;
+
+}
+.login1 #fname
+{
+
+    
+    text-align: center;
+    color: white;
+    background-color: dodgerblue;
+    border:1px-solid dodgerblue;
+
+}
+
+.headtaga 
+{
+
+float:right;
+margin-top:35px;
+margin-right:55px;
+    
+}
+
+
+
+.headtaga a{
+
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+text-decoration: none;
+color:white;
+border:1px solid whitesmoke;
+padding: 18px;
+margin-right: 8px;
+}
+
+
+.headtaga a:hover
+{
+    background-color: darkgrey;
+    outline-color:black;
+
+}
+
+.sidetag{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration-color: white;
+       padding: 100px;
+}
+
+.sidetag l1{
+    list-style:symbols();
+    margin-bottom: 5px;
+    padding: 10px;
+
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+
+
+

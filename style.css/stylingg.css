@@ -1,0 +1,23 @@
+*{
+box-sizing: border-box;
+border: black;
+    padding:0;
+    margin:0;
+    background-color: rgb(243, 243, 186);
+}
+
+.clm{
+    float: left;
+    width: 25%;
+    padding:5px;
+   
+}
+
+
+footer
+{
+background-color: black;
+color: white;
+height: 1.5em;
+margin-top: 29%;
+}
